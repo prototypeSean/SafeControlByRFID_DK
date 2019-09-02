@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		191EBB97231D0DD90040D1BE /* AddNewFiremanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191EBB96231D0DD90040D1BE /* AddNewFiremanViewController.swift */; };
 		1978EF512318E88D00AC3707 /* SafeControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978EF502318E88D00AC3707 /* SafeControlViewController.swift */; };
 		1978EF532318F66900AC3707 /* FireCommandDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978EF522318F66900AC3707 /* FireCommandDB.swift */; };
 		19AD97BE23161D3000E9B99B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD97BD23161D3000E9B99B /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		191EBB96231D0DD90040D1BE /* AddNewFiremanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFiremanViewController.swift; sourceTree = "<group>"; };
 		1978EF502318E88D00AC3707 /* SafeControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeControlViewController.swift; sourceTree = "<group>"; };
 		1978EF522318F66900AC3707 /* FireCommandDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireCommandDB.swift; sourceTree = "<group>"; };
 		19AD97BA23161D3000E9B99B /* SafeControlByRFID_DK_v0.01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeControlByRFID_DK_v0.01.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		191EBB95231D0D3B0040D1BE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1978EF502318E88D00AC3707 /* SafeControlViewController.swift */,
+				191EBB96231D0DD90040D1BE /* AddNewFiremanViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		19AD97B123161D3000E9B99B = {
 			isa = PBXGroup;
 			children = (
@@ -67,15 +78,15 @@
 		19AD97BC23161D3000E9B99B /* SafeControlByRFID_DK_v0.01 */ = {
 			isa = PBXGroup;
 			children = (
+				191EBB95231D0D3B0040D1BE /* ViewControllers */,
 				19AD97BD23161D3000E9B99B /* AppDelegate.swift */,
 				19AD97C123161D3000E9B99B /* Main.storyboard */,
 				19AD97CC23161D3200E9B99B /* Info.plist */,
 				19AD97D223162A9200E9B99B /* BluetoothModel.swift */,
-				1978EF502318E88D00AC3707 /* SafeControlViewController.swift */,
-				19AD97C923161D3200E9B99B /* LaunchScreen.storyboard */,
 				19AD97C423161D3000E9B99B /* SafeControlByRFID_DK_v0_01.xcdatamodeld */,
 				19AD97C723161D3200E9B99B /* Assets.xcassets */,
 				1978EF522318F66900AC3707 /* FireCommandDB.swift */,
+				19AD97C923161D3200E9B99B /* LaunchScreen.storyboard */,
 			);
 			path = SafeControlByRFID_DK_v0.01;
 			sourceTree = "<group>";
@@ -198,6 +209,7 @@
 				1978EF532318F66900AC3707 /* FireCommandDB.swift in Sources */,
 				19AD97D323162A9200E9B99B /* BluetoothModel.swift in Sources */,
 				1978EF512318E88D00AC3707 /* SafeControlViewController.swift in Sources */,
+				191EBB97231D0DD90040D1BE /* AddNewFiremanViewController.swift in Sources */,
 				19AD97BE23161D3000E9B99B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

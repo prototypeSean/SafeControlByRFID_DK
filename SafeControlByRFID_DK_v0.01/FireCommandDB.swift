@@ -9,13 +9,15 @@
 import Foundation
 import SQLite
 
-struct FirecommandDatabase {
+class FirecommandDatabase {
     var  db: Connection!
     init() {
         connectDatabase()
     }
     
-    mutating func connectDatabase(){
+    func connectDatabase(){
+    
+    // 把DB存到(或新建)使用者檔案路徑中的db.sqlite3
         let path = NSSearchPathForDirectoriesInDomains(
             .documentDirectory, .userDomainMask, true
             ).first!
@@ -26,23 +28,64 @@ struct FirecommandDatabase {
             print("資料庫連線失敗 \(error)")
         }
     }
-    
+    // 設計表格 FIREMAN 及其欄位
     let table_FIREMAN = Table("table_fireman")
     let table_FIREMAN_ID = Expression<Int64>("id")
+    let table_FIREMAN_SN = Expression<Int64>("serialNumber")
     let table_FIREMAN_NAME = Expression<String>("firemanName")
+    let table_FIREMAN_CALLSIGN = Expression<String>("firemanCallsign")
     let table_FIREMAN_RFIDUUID = Expression<String>("firemanRFID")
     let table_FIREMAN_DEPARTMENT = Expression<String>("firemanDepartment")
     
+    // 生成表格
     func createTableFireman() {
         do{
-            table_FIREMAN.create{table in
+            try db.run(table_FIREMAN.create{table in
                 table.column(table_FIREMAN_ID, primaryKey: .autoincrement)
+                table.column(table_FIREMAN_SN)
                 table.column(table_FIREMAN_NAME)
+                table.column(table_FIREMAN_CALLSIGN)
                 table.column(table_FIREMAN_RFIDUUID)
                 table.column(table_FIREMAN_DEPARTMENT)
-                
-                
-            }
+            })
+            print("建立 FIREMAN 表格成功")
+        }catch
+        {
+            print("建立 FIREMAN 表格失敗！\(error)")
         }
     }
+    
+    // MARK: 表格的使用方法(應該要拉出來出來做成delegate)
+    // 新增 FireMan
+    func addNewFireman(serialNumber:Int64,
+                       firemanName:String,
+                       firemanCallsign:String,
+                       firemanRFID:String,
+                       firemanDepartment:String){
+        let insert = table_FIREMAN.insert(
+            table_FIREMAN_SN <- serialNumber,
+            table_FIREMAN_NAME <- firemanName,
+            table_FIREMAN_CALLSIGN <- firemanCallsign,
+            table_FIREMAN_RFIDUUID <- firemanRFID,
+            table_FIREMAN_DEPARTMENT <- firemanDepartment)
+        
+        do{
+            try db.run(insert)
+            print("新增一名Fireman成功")
+        }catch
+        {
+            print("新增一名Fireman失敗")
+        }
+    }
+    
+    // 遍歷
+    func allFireman(){
+        for item in (try! db.prepare(table_FIREMAN)){
+            print("全部的消防員in table_FIREMAN\n id:\(item[table_FIREMAN_ID])\n,SN:\(item[table_FIREMAN_SN])\n,NAME:\(item[table_FIREMAN_NAME])\n,CALL SIGN:\(item[table_FIREMAN_CALLSIGN])\n,RFID:\(item[table_FIREMAN_RFIDUUID])\n,DEPARTMENT:\(item[table_FIREMAN_DEPARTMENT]),")
+        }
+    }
+    // 讀取
+    
+    // 更新
+    
 }

@@ -136,7 +136,6 @@ extension BluetoothModel:CBCentralManagerDelegate,CBPeripheralDelegate{
         if characteristic.isNotifying{
             print("監聽中")
         }
-        
     }
     
     // 接收數據 --> 檢查UUID正確 --> 把rfid_UUID資料寫進去

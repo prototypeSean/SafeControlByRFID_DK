@@ -12,10 +12,10 @@ class SafeControlViewController: UIViewController, BluetoothModelDelegate {
     
     var firecommandDB: FirecommandDatabase!
     
-    @IBAction func addFireManBtn(_ sender: Any) {
+    
+//    @IBAction func addFireManBtn(_ sender: Any) {
 //        firecommandDB.addNewFireman(serialNumber: 65536, firemanName: "某某某", firemanCallsign: "謝謝你9527", firemanRFID: "123123", firemanDepartment: "第三新東京大隊")
-            firecommandDB.allFireman()
-    }
+//    }
     
     
     @IBOutlet weak var SafeControlTableView: UITableView!
