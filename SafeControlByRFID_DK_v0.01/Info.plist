@@ -41,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>請提供存入相簿的權限給App</string>
+	<key>NSCameraUsageDescription</key>
+	<string>請提供使用相機的權限給App</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>請提供讀取相簿的權限給App</string>
 </dict>
 </plist>

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		191EBB97231D0DD90040D1BE /* AddNewFiremanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191EBB96231D0DD90040D1BE /* AddNewFiremanViewController.swift */; };
+		191EBB9A231DF9310040D1BE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191EBB99231DF9310040D1BE /* ImagePicker.swift */; };
+		191EBB9C231E0E7A0040D1BE /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191EBB9B231E0E7A0040D1BE /* PhotoManager.swift */; };
 		1978EF512318E88D00AC3707 /* SafeControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978EF502318E88D00AC3707 /* SafeControlViewController.swift */; };
 		1978EF532318F66900AC3707 /* FireCommandDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978EF522318F66900AC3707 /* FireCommandDB.swift */; };
 		19AD97BE23161D3000E9B99B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD97BD23161D3000E9B99B /* AppDelegate.swift */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		191EBB96231D0DD90040D1BE /* AddNewFiremanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFiremanViewController.swift; sourceTree = "<group>"; };
+		191EBB99231DF9310040D1BE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		191EBB9B231E0E7A0040D1BE /* PhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
 		1978EF502318E88D00AC3707 /* SafeControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeControlViewController.swift; sourceTree = "<group>"; };
 		1978EF522318F66900AC3707 /* FireCommandDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireCommandDB.swift; sourceTree = "<group>"; };
 		19AD97BA23161D3000E9B99B /* SafeControlByRFID_DK_v0.01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeControlByRFID_DK_v0.01.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +61,15 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		191EBB98231DF8DE0040D1BE /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				191EBB99231DF9310040D1BE /* ImagePicker.swift */,
+				191EBB9B231E0E7A0040D1BE /* PhotoManager.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		19AD97B123161D3000E9B99B = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +91,7 @@
 		19AD97BC23161D3000E9B99B /* SafeControlByRFID_DK_v0.01 */ = {
 			isa = PBXGroup;
 			children = (
+				191EBB98231DF8DE0040D1BE /* Tools */,
 				191EBB95231D0D3B0040D1BE /* ViewControllers */,
 				19AD97BD23161D3000E9B99B /* AppDelegate.swift */,
 				19AD97C123161D3000E9B99B /* Main.storyboard */,
@@ -207,7 +221,9 @@
 			files = (
 				19AD97C623161D3000E9B99B /* SafeControlByRFID_DK_v0_01.xcdatamodeld in Sources */,
 				1978EF532318F66900AC3707 /* FireCommandDB.swift in Sources */,
+				191EBB9C231E0E7A0040D1BE /* PhotoManager.swift in Sources */,
 				19AD97D323162A9200E9B99B /* BluetoothModel.swift in Sources */,
+				191EBB9A231DF9310040D1BE /* ImagePicker.swift in Sources */,
 				1978EF512318E88D00AC3707 /* SafeControlViewController.swift in Sources */,
 				191EBB97231D0DD90040D1BE /* AddNewFiremanViewController.swift in Sources */,
 				19AD97BE23161D3000E9B99B /* AppDelegate.swift in Sources */,
